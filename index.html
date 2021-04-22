@@ -1,0 +1,1450 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--link to manifest-->
+    <link rel="manifest" href="manifest.webmanifest">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" type="text/css">
+    <style>
+      @media (min-width: 410px) {
+         #screen-size {width: 405px;
+                      margin: auto;}
+         .fixed-top {width: 405px;
+                      margin: auto;}
+         .fixed-bottom {width: 405px;
+                      margin: auto;}
+        }
+        .category {background-color: lightcyan;}
+        .favScreen {background-color: lightslategray;}
+        .recipeCard {background-color: lightblue;}
+        h2 {text-align: center;}
+        .h2 {margin-left: 10px;}
+        .recipeDetails {font-size: 15px;
+                          color: gray;
+                          margin-top: 10px;
+                          margin-left: 10px;}
+        h4 {margin-top: 10px;
+            text-align: center;}
+        table {border: 3px black;
+              margin: auto;
+              margin-top: 10px;
+              margin-bottom: 10px;}
+        td {text-align: center;
+            border: 1px solid darkgray;
+            padding: 10px}
+        .favIcon {text-align: right;
+                  margin-right: 25px;}
+        ol {margin-right: 20px;}
+        ul {margin-right: 20px;}
+        .custRating {margin-left: 15px;}
+        .col {margin: auto;
+              padding-left: 30px;
+              padding-right: 30px;}
+        a {color: black;
+        }
+        .text {margin-left: 15px;
+              margin-right: 20px;}
+    </style>
+    
+    <title>Allergic but Free</title>
+  </head>
+
+<body>
+  <div id="screen-size">
+<!--Title bar and navigation-->
+<div class="fixed-top">
+    <nav class="navbar navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                <a class="nav-link" href="#homeScreen">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Recipes</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#breakfast">Breakfast</a>
+                    <a class="dropdown-item" href="#entrees">Entrees</a>
+                    <a class="dropdown-item" href="#snacks-sides">Snacks/Sides</a>
+                    <a class="dropdown-item" href="#desserts">Desserts</a>
+                </div></li>
+                <li class="nav-item">
+                <a class="nav-link" href="#favorites">Favorites</a>
+                </li>
+            </ul>
+        </div>
+        <a class="navbar-brand">Allergic but Free </a>
+            <img src="logo.png" width="101" height="75" class="d-inline-block align-top" alt="AbF logo">     
+    </nav>
+</div>
+
+<!--HomeScreen-->
+<div id="homeScreen" class="page">
+<div class="category">
+<br><br><br><br>
+<h2>Choose a Category:</h2><br>
+
+<!--cards for food categories-->
+<div class="row row-cols-1 row-cols-md-2">
+    <div class="col mb-4">
+    <a href="#breakfast">
+      <div class="card">
+        <img src="buckwheat-pancakes.jpg" class="card-img-top" height="100" alt="sample breakfast with pancakes">
+        <div class="card-body">
+          <h5 class="card-title">Breakfast</h5>
+        </div>
+      </div></a>
+    </div>
+    <div class="col mb-4">
+        <a href="#entrees">
+        <div class="card">
+            <img src="mex-casserole.jpg" class="card-img-top" height="100" alt="dish of spiralized sweet potato Mexican casserole">
+            <div class="card-body">
+            <h5 class="card-title">Entree</h5>
+            </div>
+        </div></a>
+        </div>
+        <div class="col mb-4">
+            <a href="#snacks-sides">
+        <div class="card">
+            <img src="jicama_fries2.png" class="card-img-top" height="100" alt="sample snack of jicama fries">
+            <div class="card-body">
+            <h5 class="card-title">Snacks/Sides</h5>
+            </div>
+        </div></a>
+        </div>
+        <div class="col mb-4">
+            <a href="#desserts">
+        <div class="card">
+            <img src="whip-cream.jpg" class="card-img-top" height="100" alt="coconut whipped cream with raspberries">
+            <div class="card-body">
+            <h5 class="card-title">Desserts</h5>
+            </div>
+        </div></a>
+    </div>
+  </div><br><br><br><br>
+  </div></div>
+
+  <!--footer-->
+  <div class="fixed-bottom">
+    <nav class="navbar navbar-dark bg-primary">
+    <div class="container">
+        <div class="row row-cols-4">
+            <div class="col">
+            <div class="text-center">
+                <a href="#favorites">
+            <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-heart-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                </svg>
+            <h6>Favorites</h6></a>
+            </div>
+            </div>
+            <div class="col">
+            <div class="text-center">
+                <a href="#search">
+            <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
+                <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
+                </svg>
+            <h6>Search</h6></a>
+            </div>
+            </div>            
+            <div class="col">
+                <div class="text-center">
+                <a href="#homeScreen">
+                <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-house" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+                    <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+                    </svg>
+                <h6>Home</h6></a>
+            </div>
+           
+            </div>  
+        </div>
+    </div>
+    </nav>
+  </div>
+
+<!--Favorites Screen-->
+<div id="favorites" class="page">
+<div class="favScreen">
+<br><br><br><br>
+<h2>Favorites</h2><br>
+
+<!--cards for food categories-->
+<div class="row row-cols-1 row-cols-md-2">
+    <div class="col mb-4">
+    <a href="#breakfast">
+      <div class="card">
+        <img src="buckwheat-pancakes.jpg" class="card-img-top" height="100" alt="sample breakfast with pancakes">
+        <div class="card-body">
+          <h5 class="card-title">Breakfast</h5>
+        </div>
+      </div></a>
+    </div>
+    <div class="col mb-4">
+    <a href="#entrees">
+      <div class="card">
+        <img src="mex-casserole.jpg" class="card-img-top" height="100" alt="dish of spiralized sweet potato Mexican casserole">
+        <div class="card-body">
+          <h5 class="card-title">Entree</h5>
+        </div>
+      </div></a>
+    </div>
+    <div class="col mb-4">
+        <a href="#snacks-sides">
+      <div class="card">
+        <img src="jicama_fries2.png" class="card-img-top" height="100" alt="sample snack of jicama fries">
+        <div class="card-body">
+          <h5 class="card-title">Snacks/Sides</h5>
+        </div>
+      </div></a>
+    </div>
+    <div class="col mb-4">
+        <a href="#desserts">
+      <div class="card">
+        <img src="whip-cream.jpg" class="card-img-top" height="100" alt="coconut whipped cream with raspberries">
+        <div class="card-body">
+          <h5 class="card-title">Desserts</h5>
+        </div>
+      </div></a>
+    </div>
+  </div><br><br><br><br>
+  </div></div>
+
+<!--Breakfast Recipes Screen-->
+<div id="breakfast" class="page">
+<div class="recipeCard">
+  <br><br><br><br>
+  <p class="h2">Breakfast:</p><br>
+
+<!--empty container to populate cards - search.js-->
+<div id="breakfastCard">
+
+  </div>
+  <br><br><br><br>
+</div></div>
+
+<!--Entrees Recipes screen-->
+<div id="entrees" class="page">
+<div class="recipeCard">
+    <br><br><br><br>
+    <p class="h2">Entree:</p><br>
+  
+  <!--empty container to populate cards - search.js-->
+  <div id="entreeCard">
+
+  </div>
+  <br><br><br><br>
+  </div></div>
+
+<!--Snack/Sides Recipes screen-->
+<div id="snacks-sides" class="page">
+<div class="recipeCard">
+  <br><br><br><br>
+  <p class="h2">Snacks & Sides:</p><br>
+
+  <!--empty container to populate cards - search.js-->
+  <div id="snackCard">
+
+  </div>
+  <br><br><br><br>
+  </div></div>
+
+<!--Dessert Recipes screen-->
+<div id="desserts" class="page">
+<div class="recipeCard">
+  <br><br><br><br>
+  <p class="h2">Desserts:</p><br>
+
+    <!--empty container to populate cards - search.js-->
+    <div id="dessertCard">
+
+    </div>
+  <br><br><br><br>
+</div></div>
+
+
+<!--BREAKFAST RECIPES-->
+<!--Recipe: Peanut Butter Buckwheat-->
+<div id="pb-buckwheat" class="page">
+<div class="pb-Buckwheat">
+  <br><br><br><br>
+  
+  <!--Favorites Icon-->
+  <div class=favIcon>
+  <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-suit-heart" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" d="M8 6.236l.894-1.789c.222-.443.607-1.08 1.152-1.595C10.582 2.345 11.224 2 12 2c1.676 0 3 1.326 3 2.92 0 1.211-.554 2.066-1.868 3.37-.337.334-.721.695-1.146 1.093C10.878 10.423 9.5 11.717 8 13.447c-1.5-1.73-2.878-3.024-3.986-4.064-.425-.398-.81-.76-1.146-1.093C1.554 6.986 1 6.131 1 4.92 1 3.326 2.324 2 4 2c.776 0 1.418.345 1.954.852.545.515.93 1.152 1.152 1.595L8 6.236zm.392 8.292a.513.513 0 0 1-.784 0c-1.601-1.902-3.05-3.262-4.243-4.381C1.3 8.208 0 6.989 0 4.92 0 2.755 1.79 1 4 1c1.6 0 2.719 1.05 3.404 2.008.26.365.458.716.596.992a7.55 7.55 0 0 1 .596-.992C9.281 2.049 10.4 1 12 1c2.21 0 4 1.755 4 3.92 0 2.069-1.3 3.288-3.365 5.227-1.193 1.12-2.642 2.48-4.243 4.38z"/>
+  </svg>
+</div>
+
+  <h2>Peanut Butter Buckwheat</h2><br>
+
+  <!--Stars for rating
+  <div class="text">
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.523-3.356c.329-.314.158-.888-.283-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767l-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288l1.847-3.658 1.846 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.564.564 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
+      </svg><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.523-3.356c.329-.314.158-.888-.283-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767l-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288l1.847-3.658 1.846 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.564.564 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
+      </svg><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.523-3.356c.329-.314.158-.888-.283-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767l-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288l1.847-3.658 1.846 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.564.564 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
+        </svg><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.523-3.356c.329-.314.158-.888-.283-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767l-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288l1.847-3.658 1.846 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.564.564 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
+        </svg><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.523-3.356c.329-.314.158-.888-.283-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767l-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288l1.847-3.658 1.846 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.564.564 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
+        </svg>
+  </div>-->
+
+  <p class="recipeDetails"><i>Category: Breakfast</i></p>
+  <p class="recipeDetails"><em>Free of: oats, gluten, eggs, sugar, dairy</em></p>
+  <img src="pb-buckwheat.jpg" class="card-img-top" alt="peanut butter buckwheat">
+
+  <table>
+    <tr>
+      <td width="50%"><em>prep time: </em>3 mins</td>
+      <td width="50%"><em>cook time: </em>5-8 mins</td>
+    </tr>
+      <td colspan="2"><em>total time: </em>8-11 mins</td>
+  </table>
+
+  <h4>Ingredients</h4>
+  <ul>
+    <li>1/4 cup cream of buckwheat cereal</li>
+    <li>1/2 cup water</li>
+    <li>1/4 cup + 2 Tbsp nut or coconut milk</li>
+    <li>2 1/2 Tbsp peanut powder</li>
+    <li>1 1/2 Tbsp erythritol &#40;or sweetener of choice&#41;</li>
+    <li>1/4 tsp maple extract</li>
+  </ul>
+
+  <h4>Directions</h4>
+  <ol>
+    <li>Combine all ingredients in small saucepan with lid. &#40;The sweetener and peanut powder probably won&rsquo;t dissolve until heated&#41;</li>
+    <li>Heat on high. As soon as it starts boiling, reduce heat to low and cover</li>
+    <li>Cook for 4-5 minutes stirring regularly.</li>
+    <li>When it has thickened, remove from heat and serve. It will continue to thicken if not served immediately.</li>
+  </ol>
+  <p class="text"><b>Note&colon;</b> I like to add some nut butter to mine for additional protein. You can also add a couple of tablespoons of protein powder or collagen before cooking. I recommend adding some additional liquid as well.</p>
+  <p class="recipeDetails">servings: 1</p>
+  <br><br><br>
+
+  <!--user feedback on recipe
+  <form class="needs-validation" novalidate>
+    <p class="custRating">Have you made this recipe? Tell other what you think:   
+    <input type="number" name="stars" id="rating-empty-clearable2" class="rating" data-clearable="" data-clearable-remain="true" required></p>
+    <div class="invalid-feedback">
+     Please provide your rating.
+    </div>
+    <div class="col-md-6 mb-3">
+      <label for="validationCustom03">Display Name:</label>
+      <input type="text" class="form-control" id="validationCustom03" required>
+      <div class="invalid-feedback">
+        Please provide a display name.
+      </div>
+    </div>
+    <div class="col-md-6 mb-3">
+      <label for="validationCustom05">Feedback/Comments:</label><br>
+      <textarea name="comments" id="validationCustom05" rows="4" cols="50" required></textarea>
+      <div class="invalid-feedback">
+        Please provide your comments.
+      </div>
+    </div>
+    <button class="btn btn-primary" type="submit">Submit form</button>
+  </form>
+  
+  <script>
+  // Example starter JavaScript for disabling form submissions if there are invalid fields
+  (function() {
+    'use strict';
+    window.addEventListener('load', function() {
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      var forms = document.getElementsByClassName('needs-validation');
+      // Loop over them and prevent submission
+      var validation = Array.prototype.filter.call(forms, function(form) {
+        form.addEventListener('submit', function(event) {
+          if (form.checkValidity() === false) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+          form.classList.add('was-validated');
+        }, false);
+      });
+    }, false);
+  })();
+  </script>-->
+
+  <br>
+</div></div>
+
+<!--Recipe: Chia Pudding-->
+<div id="chiaPudding" class="page">
+<div class="chia-Pudding">
+  <br><br><br><br>
+  
+  <!--Favorites Icon-->
+  <div class=favIcon>
+  <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-suit-heart" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" d="M8 6.236l.894-1.789c.222-.443.607-1.08 1.152-1.595C10.582 2.345 11.224 2 12 2c1.676 0 3 1.326 3 2.92 0 1.211-.554 2.066-1.868 3.37-.337.334-.721.695-1.146 1.093C10.878 10.423 9.5 11.717 8 13.447c-1.5-1.73-2.878-3.024-3.986-4.064-.425-.398-.81-.76-1.146-1.093C1.554 6.986 1 6.131 1 4.92 1 3.326 2.324 2 4 2c.776 0 1.418.345 1.954.852.545.515.93 1.152 1.152 1.595L8 6.236zm.392 8.292a.513.513 0 0 1-.784 0c-1.601-1.902-3.05-3.262-4.243-4.381C1.3 8.208 0 6.989 0 4.92 0 2.755 1.79 1 4 1c1.6 0 2.719 1.05 3.404 2.008.26.365.458.716.596.992a7.55 7.55 0 0 1 .596-.992C9.281 2.049 10.4 1 12 1c2.21 0 4 1.755 4 3.92 0 2.069-1.3 3.288-3.365 5.227-1.193 1.12-2.642 2.48-4.243 4.38z"/>
+  </svg>
+</div>
+
+  <h2>Chia Pudding</h2><br>
+
+  <p class="recipeDetails"><i>Category: Breakfast</i></p>
+  <p class="recipeDetails"><em>Free of: oats, gluten, eggs, sugar, dairy, nut</em></p>
+  <img src="chia-pudding.jpg" class="card-img-top" alt="bowl of chia pudding topped with kiwi and strawberries">
+
+  <table>
+    <tr>
+      <td><em>prep time: </em>3-5 mins</td>
+      <td><em>fridge time: </em>2 hours</td>
+    </tr>
+      <td colspan="2"><em>total time: </em>3-5 mins + 2 hours</td>
+  </table>
+
+  <h4>Ingredients</h4>
+  <ul>
+    <li>2 Tbsp chia seeds</li>
+    <li>1/2 cup nut or coconut milk</li>
+    <li>1 tsp sweetener &#40;many use honey or maple syrup for flavor&#41;</li>
+    <li>toppings like fresh fruit or nuts</li>
+  </ul>
+
+  <h4>Directions</h4>
+  <ol>
+    <li>Add ingredients &#40;except toppings&#41; in a jar and mix well. Wait 2-3 minutes for it to settle and mix again so there is no clumping</li>
+    <li>Cover jar and place in the fridge for at least 2 hours or overnight.</li>
+    <li>Top with your favorite toppings and enjoy!</li>
+  </ol>
+  <p class="recipeDetails">servings: 1</p>
+  <br><br><br><br>
+</div></div>
+
+<!--Recipe: Buckwheat Pancakes-->
+<div id="buckwheatPan" class="page">
+<div class="buckPancakes">
+  <br><br><br><br>
+  
+  <!--Favorites Icon-->
+  <div class=favIcon>
+  <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-suit-heart" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" d="M8 6.236l.894-1.789c.222-.443.607-1.08 1.152-1.595C10.582 2.345 11.224 2 12 2c1.676 0 3 1.326 3 2.92 0 1.211-.554 2.066-1.868 3.37-.337.334-.721.695-1.146 1.093C10.878 10.423 9.5 11.717 8 13.447c-1.5-1.73-2.878-3.024-3.986-4.064-.425-.398-.81-.76-1.146-1.093C1.554 6.986 1 6.131 1 4.92 1 3.326 2.324 2 4 2c.776 0 1.418.345 1.954.852.545.515.93 1.152 1.152 1.595L8 6.236zm.392 8.292a.513.513 0 0 1-.784 0c-1.601-1.902-3.05-3.262-4.243-4.381C1.3 8.208 0 6.989 0 4.92 0 2.755 1.79 1 4 1c1.6 0 2.719 1.05 3.404 2.008.26.365.458.716.596.992a7.55 7.55 0 0 1 .596-.992C9.281 2.049 10.4 1 12 1c2.21 0 4 1.755 4 3.92 0 2.069-1.3 3.288-3.365 5.227-1.193 1.12-2.642 2.48-4.243 4.38z"/>
+  </svg>
+</div>
+
+  <h2>Buckwheat Pancakes</h2><br>
+
+  <p class="recipeDetails"><i>Category: Breakfast</i></p>
+  <p class="recipeDetails"><em>Free of: oats, gluten, eggs, sugar, dairy, nut</em></p>
+  <img src="buckwheat-pancakes.jpg" class="card-img-top" alt="pile of buckwheat pancakes">
+
+  <table>
+    <tr>
+      <td><em>prep time: </em>5-10 mins</td>
+      <td><em>cook time: </em>10 mins</td>
+    </tr>
+      <td colspan="2"><em>total time: </em>15-20 mins</td>
+  </table>
+
+  <h4>Ingredients</h4>
+  <ul>
+    <li>1/3 cup buckwheat flour</li>
+    <li>3 Tbsp nut or coconut milk &#40;for nut-free&#41;</li>
+    <li>1/4 cup applesauce</li>
+    <li>1 tsp melted butter or coconut oil &#40;for dairy-free&#41;</li>
+    <li>1 Tbsp erythritol</li>
+    <li>generous 1/2 tsp baking powder</li>
+    <li>dash of vanilla extract &#40;optional&#41;</li>
+  </ul>
+
+  <h4>Directions</h4>
+  <ol>
+    <li>Mix all ingredients in a mixing bowl.</li>
+    <li>Heat a frying pan and spray wth coconut oil spray or use melted butter. Make sure the pan is fully heated.</li>
+    <li>Meaure 1/4 cup batter for smaller pancakes &#40;egg rings make the perfect size&#41;. Cook for about 1 - 1 1/2 minutes. Make sure the bottoms are pretty well cooked before flipping or the pancakes will fall apart.</li>
+    <li>Flip the pancakes over. It helps to get the spatula under most of the pancake before flipping. Cook for another 1-2 minutes until fully cooked.</li>
+  </ol>
+  <p class="recipeDetails">servings: 1 &#40;3-4 pancakes&#41;</p>
+  <p class="text"><b>Other variations&colon;</b></p>
+  <ul>
+    <li>To make waffles, use 2 tablespoons of aquafaba &#40;liquid from garbanzo beans&#41; instead of applesauce. Heat waffle iron, spray with oil, pour batter, and cook according to manufacturer's instructions. Makes 1 waffle.</li>
+    <li>To make cocoa pancakes, exchange 1-2 tablespoons of buckwheat flour for 1-2 tablespoons of cocoa powder. Adjust sweetener as needed.</li>
+    <li>Feel free to add berries, chocolate chips, or nuts to the batter.</li>
+    <li>This makes one serving but can be doubled or tripled for family size. They also freeze well for toasting later.</li>
+  </ul>
+  <br><br><br><br>
+</div></div>
+
+<!--Recipe: Fruit Compote-->
+<div id="fruitCompote" class="page">
+<div class="fruit-compote">
+  <br><br><br><br>
+  
+  <!--Favorites Icon-->
+  <div class=favIcon>
+  <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-suit-heart" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" d="M8 6.236l.894-1.789c.222-.443.607-1.08 1.152-1.595C10.582 2.345 11.224 2 12 2c1.676 0 3 1.326 3 2.92 0 1.211-.554 2.066-1.868 3.37-.337.334-.721.695-1.146 1.093C10.878 10.423 9.5 11.717 8 13.447c-1.5-1.73-2.878-3.024-3.986-4.064-.425-.398-.81-.76-1.146-1.093C1.554 6.986 1 6.131 1 4.92 1 3.326 2.324 2 4 2c.776 0 1.418.345 1.954.852.545.515.93 1.152 1.152 1.595L8 6.236zm.392 8.292a.513.513 0 0 1-.784 0c-1.601-1.902-3.05-3.262-4.243-4.381C1.3 8.208 0 6.989 0 4.92 0 2.755 1.79 1 4 1c1.6 0 2.719 1.05 3.404 2.008.26.365.458.716.596.992a7.55 7.55 0 0 1 .596-.992C9.281 2.049 10.4 1 12 1c2.21 0 4 1.755 4 3.92 0 2.069-1.3 3.288-3.365 5.227-1.193 1.12-2.642 2.48-4.243 4.38z"/>
+  </svg>
+</div>
+
+  <h2>Fruit Compote</h2><br>
+
+  <p class="recipeDetails"><i>Category: Breakfast</i></p>
+  <p class="recipeDetails"><em>Free of: oats, gluten, eggs, sugar, dairy, nut</em></p>
+  <img src="fruit-compote.jpg" class="card-img-top" alt="berry fruit compote on top of pancakes">
+
+  <table>
+    <tr>
+      <td><em>prep time: </em>3-5 mins</td>
+      <td><em>cook time: </em>10-15 mins</td>
+    </tr>
+      <td colspan="2"><em>total time: </em>13-20 mins</td>
+  </table>
+
+  <h4>Ingredients</h4>
+  <ul>
+    <li>1/2 cup frozen fruit &#40;berries, mixed fruit, etc&#41;</li>
+    <li>1 cup water</li>
+    <li>3-4 Tbsp erythritol &#40;or other sweetener&#41;</li>
+    <li>1-2 tsp xanthan gum or gluccomanan &#40;thickening agent&#41;</li>
+  </ul>
+
+  <h4>Directions</h4>
+  <ol>
+    <li>Place fruit, water, and erythritol in a small sauce and bring to a boil. Continue to boil until frozen fruit is well cooked and falling apart.</li>
+    <li>Slowly wisk in xanthan gum or gluccomanan and continue to simmer. Add more as needed until compote is desired consistency, usually like jelly.</li>
+  </ol>
+  <p class="recipeDetails">servings: 2-3</p>
+  <br><br><br><br>
+</div></div>
+
+
+<!--ENTREE RECIPES-->
+<!--Recipe: Spiralized Sweet Potato Mexican Casserole-->
+<div id="mexCasserole" class="page">
+<div class="mexicanCasserole">
+  <br><br><br><br>
+  
+  <!--Favorites Icon-->
+  <div class=favIcon>
+  <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-suit-heart" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" d="M8 6.236l.894-1.789c.222-.443.607-1.08 1.152-1.595C10.582 2.345 11.224 2 12 2c1.676 0 3 1.326 3 2.92 0 1.211-.554 2.066-1.868 3.37-.337.334-.721.695-1.146 1.093C10.878 10.423 9.5 11.717 8 13.447c-1.5-1.73-2.878-3.024-3.986-4.064-.425-.398-.81-.76-1.146-1.093C1.554 6.986 1 6.131 1 4.92 1 3.326 2.324 2 4 2c.776 0 1.418.345 1.954.852.545.515.93 1.152 1.152 1.595L8 6.236zm.392 8.292a.513.513 0 0 1-.784 0c-1.601-1.902-3.05-3.262-4.243-4.381C1.3 8.208 0 6.989 0 4.92 0 2.755 1.79 1 4 1c1.6 0 2.719 1.05 3.404 2.008.26.365.458.716.596.992a7.55 7.55 0 0 1 .596-.992C9.281 2.049 10.4 1 12 1c2.21 0 4 1.755 4 3.92 0 2.069-1.3 3.288-3.365 5.227-1.193 1.12-2.642 2.48-4.243 4.38z"/>
+  </svg>
+</div>
+
+  <h2>Spiralized Sweet Potato Mexican Casserole</h2><br>
+
+  <!--Stars for rating
+  <div class="text">
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.523-3.356c.329-.314.158-.888-.283-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767l-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288l1.847-3.658 1.846 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.564.564 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
+      </svg><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.523-3.356c.329-.314.158-.888-.283-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767l-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288l1.847-3.658 1.846 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.564.564 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
+      </svg><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.523-3.356c.329-.314.158-.888-.283-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767l-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288l1.847-3.658 1.846 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.564.564 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
+        </svg><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.523-3.356c.329-.314.158-.888-.283-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767l-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288l1.847-3.658 1.846 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.564.564 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
+        </svg><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.523-3.356c.329-.314.158-.888-.283-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767l-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288l1.847-3.658 1.846 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.564.564 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
+        </svg>
+  </div>-->
+
+
+  <p class="recipeDetails"><i>Category: Entrees</i></p>
+  <p class="recipeDetails"><em>Free of: oats, gluten, eggs, sugar, dairy, nuts</em></p>
+  <img src="mex-casserole.jpg" class="card-img-top" alt="dish of spiralized sweet potato Mexican casserole">
+
+  <table>
+    <tr>
+      <td><em>prep time: </em>20-25 mins</td>
+      <td><em>cook time: </em>1 hour</td>
+    </tr>
+      <td colspan="2"><em>total time: </em>1 hour, 20-25 mins</td>
+  </table>
+
+  <h4>Ingredients</h4>
+  <ul>
+    <li>1 lb boneless skinless shredded cooked chicken</li>
+    <li>2 medium sweet potatoes, spiralized</li>
+    <li>1 jar pizza sauce</li>
+    <li>1/2 jar salsa &#40;optional&#41;</li>
+    <li>1 cup water</li>
+    <li>1 tsp olive oil</li>
+    <li>1 onion, cut into quarters</li>
+    <li>4 minced garlic cloves</li>
+    <li>1 Tbsp chili powder</li>
+    <li>1/4 tsp crushed red pepper</li>
+    <li>1/4 tsp dried oregano</li>
+    <li>1/4 tsp garlic powder</li>
+    <li>1/4 tsp onion powder</li>
+    <li>1/2 tsp paprika</li>
+    <li>1 1/2 tsp ground cumin</li>
+    <li>1 1/4 tsp salt</li>
+    <li>1/8 tsp pepper</li>
+    <li>1 cup frozen corn</li>
+    <li>1 &#40;15 oz&#41; can black beans, rinsed and drained</li>
+    <li>5 oz shredded cheese &#40;optional - leave out for dairy-free&#41;</li>
+  </ul>
+
+  <h4>Directions</h4>
+  <ol>
+    <li>Preheat oven to 400&#8457;. Spiralize sweet potatoes &#40;recommend smallest noodle blade&#41; and place in 9x13 casserole dish.</li>
+    <li>Place shredded chicken in large mixing bowl. Add sauce, salsa, water, black beans, corn, and seasonings to the bowl.</li>
+    <li>In a medium skillet, heat the oil at medium-high heat. Add garlic and onions and saute until browned. Add to the bowl.</li>
+    <li>Mix ingredients in bowl. Pour over the spiralized sweet potatoes, making sure the sauce mixes well and gets in between the spirals.</li>
+    <li>Top with cheese, if using. Cover with aluminium foil and bake for an 1 hour, or until the sweet potatoes are tender.</li>
+  </ol>
+
+  <p class="text">
+    <b>Notes&colon;</b>  </p>
+    <ul>
+      <li>To vary the spiciness, choose a mild or hot salsa.</li>
+      <li>Salsa and cheese can also be added to individual bowls after baking.</li>
+    </ul>
+  <p class="recipeDetails">servings: 4-6</p>
+  <br><br><br>
+  
+  <!--user feedback form
+  <form class="needs-validation" novalidate>
+    <p class="custRating">Have you made this recipe? Tell other what you think:
+    <input type="number" name="stars" id="rating-empty-clearable6" class="rating" data-clearable="" data-clearable-remain="true" required></p>
+    <div class="invalid-feedback">
+     Please provide your rating.
+    </div>
+    <div class="col-md-6 mb-3">
+      <label for="validationCustom03">Display Name:</label>
+      <input type="text" class="form-control" id="validationCustom11" required>
+      <div class="invalid-feedback">
+        Please provide a display name.
+      </div>
+    </div>
+    <div class="col-md-6 mb-3">
+      <label for="validationCustom05">Feedback/Comments:</label><br>
+      <textarea name="comments" id="validationCustom12" rows="4" cols="50" required></textarea>
+      <div class="invalid-feedback">
+        Please provide your comments.
+      </div>
+    </div>
+    <button class="btn btn-primary" type="submit">Submit form</button>
+  </form>
+  
+  <script>
+  // Example starter JavaScript for disabling form submissions if there are invalid fields
+  (function() {
+    'use strict';
+    window.addEventListener('load', function() {
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      var forms = document.getElementsByClassName('needs-validation');
+      // Loop over them and prevent submission
+      var validation = Array.prototype.filter.call(forms, function(form) {
+        form.addEventListener('submit', function(event) {
+          if (form.checkValidity() === false) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+          form.classList.add('was-validated');
+        }, false);
+      });
+    }, false);
+  })();
+  </script>-->
+
+ <br>
+</div></div>
+
+<!--Recipe: Turkey Chili-->
+<div id="turkeyChili" class="page">
+<div class="turkey-chili">
+  <br><br><br><br>
+  
+  <!--Favorites Icon-->
+  <div class=favIcon>
+  <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-suit-heart" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" d="M8 6.236l.894-1.789c.222-.443.607-1.08 1.152-1.595C10.582 2.345 11.224 2 12 2c1.676 0 3 1.326 3 2.92 0 1.211-.554 2.066-1.868 3.37-.337.334-.721.695-1.146 1.093C10.878 10.423 9.5 11.717 8 13.447c-1.5-1.73-2.878-3.024-3.986-4.064-.425-.398-.81-.76-1.146-1.093C1.554 6.986 1 6.131 1 4.92 1 3.326 2.324 2 4 2c.776 0 1.418.345 1.954.852.545.515.93 1.152 1.152 1.595L8 6.236zm.392 8.292a.513.513 0 0 1-.784 0c-1.601-1.902-3.05-3.262-4.243-4.381C1.3 8.208 0 6.989 0 4.92 0 2.755 1.79 1 4 1c1.6 0 2.719 1.05 3.404 2.008.26.365.458.716.596.992a7.55 7.55 0 0 1 .596-.992C9.281 2.049 10.4 1 12 1c2.21 0 4 1.755 4 3.92 0 2.069-1.3 3.288-3.365 5.227-1.193 1.12-2.642 2.48-4.243 4.38z"/>
+  </svg>
+</div>
+
+  <h2>Turkey Chili</h2><br>
+
+  <p class="recipeDetails"><i>Category: Entrees</i></p>
+  <p class="recipeDetails"><em>Free of: oats, gluten, eggs, sugar, dairy, nuts</em></p>
+  <img src="chili.jpg" class="card-img-top" alt="bowl of turkey chili">
+
+  <table>
+    <tr>
+      <td><em>prep time: </em>25-30 mins</td>
+      <td><em>cook time: </em>50-60 mins</td>
+    </tr>
+      <td colspan="2"><em>total time: </em>1 hour, 15-30 mins</td>
+  </table>
+
+  <h4>Ingredients</h4>
+  <ul>
+    <li>2 lb ground turkey</li>
+    <li>2 medium sweet onions</li>
+    <li>2 carrots</li>
+    <li>4 celery stalks</li>
+    <li>1 sweet potato &#40;optional&#41;</li>
+    <li>2 garlic cloves, minced</li>
+    <li>2 Tbsp avocado oil</li>
+    <li>1 tsp salt</li>
+    <li>2 tsp black pepper</li>
+    <li>3 Tbsp chili powder</li>
+    <li>2 Tbsp ground cumin</li>
+    <li>1 tsp Italian seasoning</li>
+    <li>1/4 tsp crushed red pepper</li>
+    <li>14oz can pureed or crushed tomatoes</li>
+    <li>32oz vegetable or chicken stock</li>
+    <li>16oz can black beans, rinsed and drained</li>
+    <li>1/2 cup corn</li>
+    <li>16oz can garbanzo beans, rinsed and drained</li>
+    <li>16oz can white beans, rinsed and drained</li>
+  </ul>
+
+  <h4>Directions</h4>
+  <ol>
+    <li>Brown meat and drain &#40;to get rid of excess fat, rinse under hot water&#41;. Set aside for later.</li>
+    <li>Chop onions, celery, sweet potato, and carrots. Add to stock pot with oil and garlic.</li>
+    <li>Saute over medium heat until vegetables are soft, about 10 mins.</li>
+    <li>Add salt, pepper, chili powder, cumin, red pepper, and Italian seasoning. Saute another 2 mins.</li>
+    <li>Add the rest of the ingredients. Stir well and simmer for 45 mins.</li>
+  </ol>
+
+  <p class="text">
+    <b>Notes&colon;</b></p>
+    <ul>
+      <li>To vary the spiciness, decrease or increase the chili powder, black peper, and red pepper.</li>
+      <li>If you prefer more tomato in your chili, add a can of dice tomatoes or more crushed tomatoes.</li>
+      <li>This can also be cooked in the crock pot. Decreased the stock to 8-16oz. At step 5, transfer to crockpot, add the rest of the ingredients, and cook all day on low.</li>
+    </ul>
+  <p class="recipeDetails">servings: 4-6</p>
+  <br><br><br><br>
+</div></div>
+
+<!--Recipe: Balsalmic Tenderloin-->
+<div id="balTenderloin" class="page">
+<div class="balsalm-tender">
+  <br><br><br><br>
+  
+  <!--Favorites Icon-->
+  <div class=favIcon>
+  <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-suit-heart" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" d="M8 6.236l.894-1.789c.222-.443.607-1.08 1.152-1.595C10.582 2.345 11.224 2 12 2c1.676 0 3 1.326 3 2.92 0 1.211-.554 2.066-1.868 3.37-.337.334-.721.695-1.146 1.093C10.878 10.423 9.5 11.717 8 13.447c-1.5-1.73-2.878-3.024-3.986-4.064-.425-.398-.81-.76-1.146-1.093C1.554 6.986 1 6.131 1 4.92 1 3.326 2.324 2 4 2c.776 0 1.418.345 1.954.852.545.515.93 1.152 1.152 1.595L8 6.236zm.392 8.292a.513.513 0 0 1-.784 0c-1.601-1.902-3.05-3.262-4.243-4.381C1.3 8.208 0 6.989 0 4.92 0 2.755 1.79 1 4 1c1.6 0 2.719 1.05 3.404 2.008.26.365.458.716.596.992a7.55 7.55 0 0 1 .596-.992C9.281 2.049 10.4 1 12 1c2.21 0 4 1.755 4 3.92 0 2.069-1.3 3.288-3.365 5.227-1.193 1.12-2.642 2.48-4.243 4.38z"/>
+  </svg>
+</div>
+
+  <h2>Balsalmic Tenderloin</h2><br>
+
+  <p class="recipeDetails"><i>Category: Entrees</i></p>
+  <p class="recipeDetails"><em>Free of: oats, gluten, eggs, sugar, dairy, nuts</em></p>
+  <img src="pork.jpg" class="card-img-top" alt="cooked pork tenderloin">
+
+  <table>
+    <tr>
+      <td><em>prep time: </em>10-15 mins</td>
+      <td><em>cook time: </em>4-6 hours</td>
+    </tr>
+      <td colspan="2"><em>total time: </em>4-6 hours, 10-15 mins</td>
+  </table>
+
+  <h4>Ingredients</h4>
+  <ul>
+    <li>2-3 lb boneless tenderloin, pork or beef</li>
+    <li>1 cup chicken or vegetable broth</li>
+    <li>1/2 cup balsalmic vinegar</li>
+    <li>1 Tbsp Worcestershire sauce</li>
+    <li>1 Tbsp tamari sauce or coconut aminos</li>
+    <li>1/2 tsp red pepper flakes</li>
+    <li>2 cloves garlic, minced</li>
+    <li>1 Tbsp honey</li>
+  </ul>
+
+  <h4>Directions</h4>
+  <ol>
+    <li>Place tenderloin in slow cooker.</li>
+    <li>In 2-cup measuring cup, mix together the remaining ingredients, except the honey. Pour over the tenderloin.</li>
+    <li>Pour the honey over the tenderloin. It will melt and mix with sauce while cooking.</li>
+    <li>Cook on low for 6 hours or high for 4 hours.</li>
+    <li>Once cooked, move the tenderloin to a serving dish. Break apart lightly with 2 forks and ladle gravy over it. Serve warm.</li>
+  </ol>
+
+  <p class="text">
+    <b>Notes&colon;</b>  </p>
+    <ul>
+      <li>To vary the spiciness, decrease or increase the red pepper flakes.</li>
+      <li>If this is too vinegary for your taste, decrease the balsalmic vinegar to 1/4 cup and increase Worcestershire sauce and tamari to 3-4 Tbsp each.</li>
+    </ul>
+  <p class="recipeDetails">servings: 4-6</p>
+  <br><br><br><br>
+</div></div>
+
+<!--Recipe: Butternut Squash & Sweet Potato Soup-->
+<div id="squashSoup" class="page">
+<div class="squash-soup">
+  <br><br><br><br>
+  
+  <!--Favorites Icon-->
+  <div class=favIcon>
+  <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-suit-heart" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" d="M8 6.236l.894-1.789c.222-.443.607-1.08 1.152-1.595C10.582 2.345 11.224 2 12 2c1.676 0 3 1.326 3 2.92 0 1.211-.554 2.066-1.868 3.37-.337.334-.721.695-1.146 1.093C10.878 10.423 9.5 11.717 8 13.447c-1.5-1.73-2.878-3.024-3.986-4.064-.425-.398-.81-.76-1.146-1.093C1.554 6.986 1 6.131 1 4.92 1 3.326 2.324 2 4 2c.776 0 1.418.345 1.954.852.545.515.93 1.152 1.152 1.595L8 6.236zm.392 8.292a.513.513 0 0 1-.784 0c-1.601-1.902-3.05-3.262-4.243-4.381C1.3 8.208 0 6.989 0 4.92 0 2.755 1.79 1 4 1c1.6 0 2.719 1.05 3.404 2.008.26.365.458.716.596.992a7.55 7.55 0 0 1 .596-.992C9.281 2.049 10.4 1 12 1c2.21 0 4 1.755 4 3.92 0 2.069-1.3 3.288-3.365 5.227-1.193 1.12-2.642 2.48-4.243 4.38z"/>
+  </svg>
+</div>
+
+  <h2>Butternut Squash &amp; Sweet Potato Soup</h2><br>
+
+  <p class="recipeDetails"><i>Category: Entrees</i></p>
+  <p class="recipeDetails"><em>Free of: oats, gluten, eggs, sugar, dairy, nuts</em></p>
+  <img src="soup.jpg" class="card-img-top" alt="cup of butternut sqaush and sweet potato soup topped with turkey bacon">
+
+  <table>
+    <tr>
+      <td><em>prep time: </em>10-15 mins</td>
+      <td><em>cook time: </em>6-7 hours</td>
+    </tr>
+      <td colspan="2"><em>total time: </em>6-7 hours, 10-15 mins</td>
+  </table>
+
+  <h4>Ingredients</h4>
+  <ul>
+    <li>2 cans white beans, rinsed and drained</li>
+    <li>1 &#40;10- to 12-ounce&#41; bag frozen riced cauliflower</li>
+    <li>1 &#40;12- to 16-ounce&#41; bag frozen cut butternut squash &#40;or one medium butternut squash chopped into small cubes&#41;</li>
+    <li>1 &#40;12- to 16-ounce&#41; bag frozen cut sweet potatoes &#40;or one large sweet potato peeled and chopped into small cubes&#41;</li>
+    <li>1 &#40;10- to 12-ounce&#41; bag frozen chopped onion &#40;or 1 large onion, quartered&#41;</li>
+    <li>8-10 cups just off the boil water</li>
+    <li>a few squirts Bragg liquid aminos or coconut aminos &#40;optional&#41;</li>
+    <li>4 minced garlic cloves</li>
+    <li>1 tsp black pepper</li>
+    <li>1 tsp onion powder</li>
+    <li>1/2 tsp mesquite liquid smoke</li>
+    <li>a few dashes of red pepper to taste</li>
+    <li>1 1/2 tsp xanthan gum or gluccomanan</li>
+    <li>2-2 1/2 tsp salt</li>
+    <li>toppings such as cooked turkey bacon, cooked bacon, or roasted pumpkin seeds</li>
+  </ul>
+
+  <h4>Directions</h4>
+  <ol>
+    <li>Place everything except xanthan gum/gluccomanan, salt, and toppings in slow cooker. Cook on high 6-7 hours</li>
+    <li>Add xanthan gum or gluccomanan and salt to the crockpot and use an immersion blender to blend everything into a smooth soup. Please note, the soup is very hot so be careful not splatter. Another option is to scoop out some of the ingredients and blend in blender. Hold the lid on tight since it will be very hot.</li>
+    <li>Taste and add more salt and red pepper as needed.</li>
+    <li>Top servings with turkey bacon, bacon, or roasted pumpkin seeds.</li>
+  </ol>
+
+  <p class="text"><b>Note&colon;</b> For added protein, add some protein powder or collagen to the hot water before adding to the soup.</p>
+  <p class="recipeDetails">servings: 6-8</p>
+  <br><br><br><br>
+</div></div>
+
+
+<!--SNACKS/SIDES RECIPES-->
+<!--Recipe: Carrot Fries-->
+<div id="carrot-fries" class="page">
+<div class="carrotFries">
+  <br><br><br><br>
+  
+  <!--Favorites Icon-->
+  <div class=favIcon>
+  <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-suit-heart" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" d="M8 6.236l.894-1.789c.222-.443.607-1.08 1.152-1.595C10.582 2.345 11.224 2 12 2c1.676 0 3 1.326 3 2.92 0 1.211-.554 2.066-1.868 3.37-.337.334-.721.695-1.146 1.093C10.878 10.423 9.5 11.717 8 13.447c-1.5-1.73-2.878-3.024-3.986-4.064-.425-.398-.81-.76-1.146-1.093C1.554 6.986 1 6.131 1 4.92 1 3.326 2.324 2 4 2c.776 0 1.418.345 1.954.852.545.515.93 1.152 1.152 1.595L8 6.236zm.392 8.292a.513.513 0 0 1-.784 0c-1.601-1.902-3.05-3.262-4.243-4.381C1.3 8.208 0 6.989 0 4.92 0 2.755 1.79 1 4 1c1.6 0 2.719 1.05 3.404 2.008.26.365.458.716.596.992a7.55 7.55 0 0 1 .596-.992C9.281 2.049 10.4 1 12 1c2.21 0 4 1.755 4 3.92 0 2.069-1.3 3.288-3.365 5.227-1.193 1.12-2.642 2.48-4.243 4.38z"/>
+  </svg>
+</div>
+
+  <h2>Carrot Fries</h2><br>
+
+  <!--Stars for rating
+  <div class="text">
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.523-3.356c.329-.314.158-.888-.283-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767l-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288l1.847-3.658 1.846 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.564.564 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
+      </svg><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.523-3.356c.329-.314.158-.888-.283-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767l-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288l1.847-3.658 1.846 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.564.564 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
+      </svg><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.523-3.356c.329-.314.158-.888-.283-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767l-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288l1.847-3.658 1.846 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.564.564 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
+        </svg><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.523-3.356c.329-.314.158-.888-.283-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767l-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288l1.847-3.658 1.846 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.564.564 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
+        </svg><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.523-3.356c.329-.314.158-.888-.283-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767l-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288l1.847-3.658 1.846 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.564.564 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
+        </svg>
+  </div>-->
+
+
+  <p class="recipeDetails"><i>Category: Snacks/Sides</i></p>
+  <p class="recipeDetails"><em>Free of: oats, gluten, eggs, sugar, dairy, nuts</em></p>
+  <img src="carrot-fries.jpg" class="card-img-top" alt="roasted carrot fries">
+
+  <table>
+    <tr>
+      <td><em>prep time: </em>10 mins</td>
+      <td><em>cook time: </em>20-25 mins</td>
+    </tr>
+      <td colspan="2"><em>total time: </em>30-35 mins</td>
+  </table>
+
+  <h4>Ingredients</h4>
+  <ul>
+    <li>1 lb carrots</li>
+    <li>2 Tbsp avocado oil &#40;or oil of choice&#41;</li>
+    <li>1 tsp salt</li>
+    <li>1 tsp pepper</li>
+    <li>Seasonings of choice &#40;optional&#41;</li>
+  </ul>
+
+  <h4>Directions</h4>
+  <ol>
+    <li>Preheat oven to 400&#8457;. Make sure the oven is fully preheated before inserting the pan.</li>
+    <li>Wash, peel, and cut carrots into sticks. The thinner the carrots, the more flavorful the carrot fries. Put them in a bowl.</li>
+    <li>Toss in oil and salt and pepper.</li>
+    <li>&#40;Optional&#41; Add any other desired seasonings such as paprika, garlic salt, rosemary or nutritional yeast.</li>
+    <li>Place parchment paper on a large cookie sheet. Lay out the carrot sticks on the pan. Spread them out as much as possible.</li>
+    <li>Bake in preheated oven for 20-25 minutes. Its best to bake them in a hot oven so that the carrots release their juices which will be instantly carmelized. This will crispen the fries.</li>
+  </ol>
+
+  <p class="recipeDetails">servings: 2-4</p>
+  <br><br><br>
+
+  <!--user feedback form and recipe rating
+  <form class="needs-validation" novalidate>
+    <p class="custRating">Have you made this recipe? Tell other what you think:
+    <input type="number" name="stars" id="rating-empty-clearable10" class="rating" data-clearable="" data-clearable-remain="true" required></p>
+    <div class="invalid-feedback">
+     Please provide your rating.
+    </div>
+    <div class="col-md-6 mb-3">
+      <label for="validationCustom03">Display Name:</label>
+      <input type="text" class="form-control" id="validationCustom19" required>
+      <div class="invalid-feedback">
+        Please provide a display name.
+      </div>
+    </div>
+    <div class="col-md-6 mb-3">
+      <label for="validationCustom05">Feedback/Comments:</label><br>
+      <textarea name="comments" id="validationCustom20" rows="4" cols="50" required></textarea>
+      <div class="invalid-feedback">
+        Please provide your comments.
+      </div>
+    </div>
+    <button class="btn btn-primary" type="submit">Submit form</button>
+  </form>
+  
+  <script>
+  // Example starter JavaScript for disabling form submissions if there are invalid fields
+  (function() {
+    'use strict';
+    window.addEventListener('load', function() {
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      var forms = document.getElementsByClassName('needs-validation');
+      // Loop over them and prevent submission
+      var validation = Array.prototype.filter.call(forms, function(form) {
+        form.addEventListener('submit', function(event) {
+          if (form.checkValidity() === false) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+          form.classList.add('was-validated');
+        }, false);
+      });
+    }, false);
+  })();
+  </script>-->
+
+<br>
+</div></div>
+
+<!--Recipe: Jicama Fries-->
+<div id="jicamaFries" class="page">
+<div class="jicama-Fries">
+  <br><br><br><br>
+  
+  <!--Favorites Icon-->
+  <div class=favIcon>
+  <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-suit-heart" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" d="M8 6.236l.894-1.789c.222-.443.607-1.08 1.152-1.595C10.582 2.345 11.224 2 12 2c1.676 0 3 1.326 3 2.92 0 1.211-.554 2.066-1.868 3.37-.337.334-.721.695-1.146 1.093C10.878 10.423 9.5 11.717 8 13.447c-1.5-1.73-2.878-3.024-3.986-4.064-.425-.398-.81-.76-1.146-1.093C1.554 6.986 1 6.131 1 4.92 1 3.326 2.324 2 4 2c.776 0 1.418.345 1.954.852.545.515.93 1.152 1.152 1.595L8 6.236zm.392 8.292a.513.513 0 0 1-.784 0c-1.601-1.902-3.05-3.262-4.243-4.381C1.3 8.208 0 6.989 0 4.92 0 2.755 1.79 1 4 1c1.6 0 2.719 1.05 3.404 2.008.26.365.458.716.596.992a7.55 7.55 0 0 1 .596-.992C9.281 2.049 10.4 1 12 1c2.21 0 4 1.755 4 3.92 0 2.069-1.3 3.288-3.365 5.227-1.193 1.12-2.642 2.48-4.243 4.38z"/>
+  </svg>
+</div>
+
+  <h2>Jicama Fries</h2><br>
+
+  <p class="recipeDetails"><i>Category: Snacks/Sides</i></p>
+  <p class="recipeDetails"><em>Free of: oats, gluten, eggs, sugar, dairy, nuts</em></p>
+  <img src="jicama_fries2.png" class="card-img-top" alt="sample of jicama fries">
+
+  <table>
+    <tr>
+      <td><em>prep time: </em>15-20 mins</td>
+      <td><em>cook time: </em>40-45 mins</td>
+    </tr>
+      <td colspan="2"><em>total time: </em>55-65 mins</td>
+  </table>
+
+  <h4>Ingredients</h4>
+  <ul>
+    <li>1 large jicama &#40;or pre-cut jicama spears&#41;</li>
+    <li>1-2 Tbsp avocado oil</li>
+    <li>Seasonings of choice &#40;I recommend paprika, garlic powder, onion powder, and nutritional yeast&#41;</li>
+  </ul>
+
+  <h4>Directions</h4>
+  <ol>
+    <li>Preheat oven to 400&#8457; &#40;if using oven instead of air fryer&#41;.</li>
+    <li>Cut skin off of the jicama and chop jicama into fries no longer thicker than 1/4 inch.</li>
+    <li>Toss in oil and seasonings.</li>
+    <li>If using the oven, spread out on cookie sheet and cook for 35-40 minutes. Toss fries halfway through.</li>
+    <li>If using an air fryer, fry at 400&#8457;. Toss every 5 minutes until fully cooked &#40;about 35-40 minutes&#41;.</li>
+  </ol>
+
+  <p class="recipeDetails">servings: 1-2</p>
+  <br><br><br><br>
+</div></div>
+
+<!--Recipe: Roasted Garbanzo Beans-->
+<div id="garbanzo" class="page">
+<div class="roasted-garbanzo">
+  <br><br><br><br>
+  
+  <!--Favorites Icon-->
+  <div class=favIcon>
+  <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-suit-heart" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" d="M8 6.236l.894-1.789c.222-.443.607-1.08 1.152-1.595C10.582 2.345 11.224 2 12 2c1.676 0 3 1.326 3 2.92 0 1.211-.554 2.066-1.868 3.37-.337.334-.721.695-1.146 1.093C10.878 10.423 9.5 11.717 8 13.447c-1.5-1.73-2.878-3.024-3.986-4.064-.425-.398-.81-.76-1.146-1.093C1.554 6.986 1 6.131 1 4.92 1 3.326 2.324 2 4 2c.776 0 1.418.345 1.954.852.545.515.93 1.152 1.152 1.595L8 6.236zm.392 8.292a.513.513 0 0 1-.784 0c-1.601-1.902-3.05-3.262-4.243-4.381C1.3 8.208 0 6.989 0 4.92 0 2.755 1.79 1 4 1c1.6 0 2.719 1.05 3.404 2.008.26.365.458.716.596.992a7.55 7.55 0 0 1 .596-.992C9.281 2.049 10.4 1 12 1c2.21 0 4 1.755 4 3.92 0 2.069-1.3 3.288-3.365 5.227-1.193 1.12-2.642 2.48-4.243 4.38z"/>
+  </svg>
+</div>
+
+  <h2>Roasted Garbanzo Beans</h2><br>
+
+  <p class="recipeDetails"><i>Category: Snacks/Sides</i></p>
+  <p class="recipeDetails"><em>Free of: oats, gluten, eggs, sugar, dairy, nuts</em></p>
+  <img src="garbanzo.jpg" class="card-img-top" alt="bowl of roasted and seasoned garbanzo beans">
+
+  <table>
+    <tr>
+      <td><em>prep time: </em>5-10 mins</td>
+      <td><em>cook time: </em>30-35 mins</td>
+    </tr>
+      <td colspan="2"><em>total time: </em>35-45 mins</td>
+  </table>
+
+  <h4>Ingredients</h4>
+  <ul>
+    <li>1 can garbanzo beans, rinsed and drained</li>
+    <li>1 Tbsp avocado oil</li>
+    <li>Seasonings of choice &#40;such as nutritional yeast, taco seasoning, ranch seasoning, etc.&#41;</li>
+  </ul>
+
+  <h4>Directions</h4>
+  <ol>
+    <li>Preheat oven to 375&#8457;. Put parchment paper on a large cookie sheet.</li>
+    <li>Toss garbanzo beans in oil and seasonings of choice. Spread out on cookie sheet.</li>
+    <li>Bake for 30-35 minutes. Toss/stir garbanzo beans every 10 minutes.</li>
+    <li>After cooling, store in airtight container for up to a week.</li>
+  </ol>
+
+  <p class="recipeDetails">servings: 1-2</p>
+  <br><br><br><br>
+</div></div>
+
+<!--Recipe: Hummus-->
+<div id="hummus" class="page">
+<div class="Hummus">
+  <br><br><br><br>
+  
+  <!--Favorites Icon-->
+  <div class=favIcon>
+  <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-suit-heart" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" d="M8 6.236l.894-1.789c.222-.443.607-1.08 1.152-1.595C10.582 2.345 11.224 2 12 2c1.676 0 3 1.326 3 2.92 0 1.211-.554 2.066-1.868 3.37-.337.334-.721.695-1.146 1.093C10.878 10.423 9.5 11.717 8 13.447c-1.5-1.73-2.878-3.024-3.986-4.064-.425-.398-.81-.76-1.146-1.093C1.554 6.986 1 6.131 1 4.92 1 3.326 2.324 2 4 2c.776 0 1.418.345 1.954.852.545.515.93 1.152 1.152 1.595L8 6.236zm.392 8.292a.513.513 0 0 1-.784 0c-1.601-1.902-3.05-3.262-4.243-4.381C1.3 8.208 0 6.989 0 4.92 0 2.755 1.79 1 4 1c1.6 0 2.719 1.05 3.404 2.008.26.365.458.716.596.992a7.55 7.55 0 0 1 .596-.992C9.281 2.049 10.4 1 12 1c2.21 0 4 1.755 4 3.92 0 2.069-1.3 3.288-3.365 5.227-1.193 1.12-2.642 2.48-4.243 4.38z"/>
+  </svg>
+</div>
+
+  <h2>Hummus</h2><br>
+
+  <p class="recipeDetails"><i>Category: Snacks/Sides</i></p>
+  <p class="recipeDetails"><em>Free of: oats, gluten, eggs, sugar, dairy, nuts</em></p>
+  <img src="hummus.jpg" class="card-img-top" alt="bowl of homemade hummus">
+
+  <table>
+    <tr>
+      <td><em>prep time: </em>10-15 mins</td>
+      <td><em>cook time: </em>N/A</td>
+    </tr>
+      <td colspan="2"><em>total time: </em>10-15 mins</td>
+  </table>
+
+  <h4>Ingredients</h4>
+  <ul>
+    <li>2 cans garbanzo beans, rinsed and drained</li>
+    <li>1/2 cup tahini</li>
+    <li>1 tsp ground cumin</li>
+    <li>juice of 1 lemon</li>
+    <li>1 Tbsp olive oil</li>
+    <li>1 tsp salt</li>
+    <li>1-2 cloves garlic</li>
+    <li>1/4 - 1/2 cup water</li>
+    <li>&#40;optional&#41; seasonings for other flavors: jalape&ntilde;os, crushed red pepper, extra garlic, etc.</li>
+  </ul>
+
+  <h4>Directions</h4>
+  <ol>
+    <li>Put all ingredients, except water and optional seasonings, in a food processor and process well. It will look dry.</li>
+    <li>Add water a little at time and process. Continue until at desired consistency.</li>
+    <li>Taste and add seasonings for desired flavor.</li>
+    <li>Store in airtight container in the fridge for up to a week.</li>
+  </ol>
+
+  <p class="recipeDetails">servings: 8-10</p>
+  <br><br><br><br>
+</div></div>
+
+
+<!--DESSERT RECIPES-->
+<!--Recipe: Chocolate Muffins-->
+<div id="chocoMuffins" class="page">
+<div class="choco-muffins">
+  <br><br><br><br>
+  
+  <!--Favorites Icon-->
+  <div class=favIcon>
+  <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-suit-heart" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" d="M8 6.236l.894-1.789c.222-.443.607-1.08 1.152-1.595C10.582 2.345 11.224 2 12 2c1.676 0 3 1.326 3 2.92 0 1.211-.554 2.066-1.868 3.37-.337.334-.721.695-1.146 1.093C10.878 10.423 9.5 11.717 8 13.447c-1.5-1.73-2.878-3.024-3.986-4.064-.425-.398-.81-.76-1.146-1.093C1.554 6.986 1 6.131 1 4.92 1 3.326 2.324 2 4 2c.776 0 1.418.345 1.954.852.545.515.93 1.152 1.152 1.595L8 6.236zm.392 8.292a.513.513 0 0 1-.784 0c-1.601-1.902-3.05-3.262-4.243-4.381C1.3 8.208 0 6.989 0 4.92 0 2.755 1.79 1 4 1c1.6 0 2.719 1.05 3.404 2.008.26.365.458.716.596.992a7.55 7.55 0 0 1 .596-.992C9.281 2.049 10.4 1 12 1c2.21 0 4 1.755 4 3.92 0 2.069-1.3 3.288-3.365 5.227-1.193 1.12-2.642 2.48-4.243 4.38z"/>
+  </svg>
+</div>
+
+  <h2>Chocolate Muffins</h2><br>
+
+  <!--Stars for rating
+  <div class="text">
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.523-3.356c.329-.314.158-.888-.283-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767l-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288l1.847-3.658 1.846 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.564.564 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
+      </svg><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.523-3.356c.329-.314.158-.888-.283-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767l-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288l1.847-3.658 1.846 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.564.564 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
+      </svg><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.523-3.356c.329-.314.158-.888-.283-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767l-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288l1.847-3.658 1.846 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.564.564 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
+        </svg><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.523-3.356c.329-.314.158-.888-.283-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767l-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288l1.847-3.658 1.846 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.564.564 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
+        </svg><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.523-3.356c.329-.314.158-.888-.283-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767l-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288l1.847-3.658 1.846 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.564.564 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
+        </svg>
+  </div>-->
+
+  <p class="recipeDetails"><i>Category: Desserts</i></p>
+  <p class="recipeDetails"><em>Free of: oats, gluten, eggs, sugar, dairy, nuts</em></p>
+  <img src="choco-muffin.jpg" class="card-img-top" alt="Chocolate muffins">
+
+  <table>
+    <tr>
+      <td><em>prep time: </em>10-15 mins</td>
+      <td><em>cook time: </em>11-12 mins</td>
+    </tr>
+      <td colspan="2"><em>total time: </em>21-27 mins</td>
+  </table>
+
+  <h4>Ingredients</h4>
+  <ul>
+    <li>1 1/2 cups buckwheat flour</li>
+    <li>1/2 cup unsweetened cocoa powder &#40;recommend 1/4 cup dark and 1/4 cup regular&#41;</li>
+    <li>3/4 cup erythritol</li>
+    <li>1/3 tsp salt</li>
+    <li>1 1/2 tsp baking powder</li>
+    <li>1/2 tsp baking soda</li>
+    <li>7 Tbsp aquafaba - see note below &#40;or 3 large egg whites if not egg-free&#41;</li>
+    <li>1 cup unsweetened applesauce &#40;or plain Greek yogurt if not dairy-free&#41;</li>
+    <li>1/2 cup water</li>
+    <li>1 1/2 tsp vanilla extract &#40;optional&#41;</li>
+  </ul>
+
+  <h4>Directions</h4>
+  <ol>
+    <li>Preheat the oven to 350&#8457;. Lightly coat muffin tins with oil spray or use parchment paper muffin liners.</li>
+    <li>Combine all ingredients in a large mixing bowl and mix well.</li>
+    <li>Spoon batter into muffin holes &#40;1/4 - 1/3 cup in each...they will rise when baking&#41;.</li>
+    <li>Bake 11 to 13 minutes. Muffins may be a spongy. If using aquafaba, this is fine. If using eggs, check the centers of several muffins with a toothpick to ensure they come out clean.</li>
+  </ol>
+
+  <p class="text"><b>Note:</b> Aquafaba is the liquid from garbanzo beans. A can of garbanzo beans contains about 1/2 cup of aquafaba.</p>
+  <p class="recipeDetails">servings: 12-14 muffins</p>
+  <br><br><br>
+
+  <!--user feedback form and recipe rating
+  <form class="needs-validation" novalidate>
+    <p class="custRating">Have you made this recipe? Tell other what you think:
+    <input type="number" name="stars" id="rating-empty-clearable14" class="rating" data-clearable="" data-clearable-remain="true" required></p>
+    <div class="invalid-feedback">
+     Please provide your rating.
+    </div>
+    <div class="col-md-6 mb-3">
+      <label for="validationCustom03">Display Name:</label>
+      <input type="text" class="form-control" id="validationCustom27" required>
+      <div class="invalid-feedback">
+        Please provide a display name.
+      </div>
+    </div>
+    <div class="col-md-6 mb-3">
+      <label for="validationCustom05">Feedback/Comments:</label><br>
+      <textarea name="comments" id="validationCustom28" rows="4" cols="50" required></textarea>
+      <div class="invalid-feedback">
+        Please provide your comments.
+      </div>
+    </div>
+    <button class="btn btn-primary" type="submit">Submit form</button>
+  </form>
+  
+  <script>
+  // Example starter JavaScript for disabling form submissions if there are invalid fields
+  (function() {
+    'use strict';
+    window.addEventListener('load', function() {
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      var forms = document.getElementsByClassName('needs-validation');
+      // Loop over them and prevent submission
+      var validation = Array.prototype.filter.call(forms, function(form) {
+        form.addEventListener('submit', function(event) {
+          if (form.checkValidity() === false) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+          form.classList.add('was-validated');
+        }, false);
+      });
+    }, false);
+  })();
+  </script>  <br><br><br>-->
+
+<br>
+</div></div>
+
+<!--Recipe: Chocolate Ice Cream-->
+<div id="chocoIceCream" class="page">
+<div class="choco-ice-cream">
+  <br><br><br><br>
+  
+  <!--Favorites Icon-->
+  <div class=favIcon>
+  <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-suit-heart" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" d="M8 6.236l.894-1.789c.222-.443.607-1.08 1.152-1.595C10.582 2.345 11.224 2 12 2c1.676 0 3 1.326 3 2.92 0 1.211-.554 2.066-1.868 3.37-.337.334-.721.695-1.146 1.093C10.878 10.423 9.5 11.717 8 13.447c-1.5-1.73-2.878-3.024-3.986-4.064-.425-.398-.81-.76-1.146-1.093C1.554 6.986 1 6.131 1 4.92 1 3.326 2.324 2 4 2c.776 0 1.418.345 1.954.852.545.515.93 1.152 1.152 1.595L8 6.236zm.392 8.292a.513.513 0 0 1-.784 0c-1.601-1.902-3.05-3.262-4.243-4.381C1.3 8.208 0 6.989 0 4.92 0 2.755 1.79 1 4 1c1.6 0 2.719 1.05 3.404 2.008.26.365.458.716.596.992a7.55 7.55 0 0 1 .596-.992C9.281 2.049 10.4 1 12 1c2.21 0 4 1.755 4 3.92 0 2.069-1.3 3.288-3.365 5.227-1.193 1.12-2.642 2.48-4.243 4.38z"/>
+  </svg>
+</div>
+
+  <h2>Chocolate Ice Cream</h2><br>
+
+  <p class="recipeDetails"><i>Category: Desserts</i></p>
+  <p class="recipeDetails"><em>Free of: oats, gluten, eggs, sugar, dairy, nuts</em></p>
+  <img src="choco-ice-cream.jpg" class="card-img-top" alt="bowl of homemade chocolate ice cream">
+
+  <table>
+    <tr>
+      <td><em>prep time: </em>5-10 mins</td>
+      <td><em>freeze time: </em>20-25 mins</td>
+    </tr>
+      <td colspan="2"><em>total time: </em>25-35 mins</td>
+  </table>
+
+  <h4>Ingredients</h4>
+  <ul>
+    <li>38oz almond milk &#40;or coconut milk for nut-free&#41;</li>
+    <li>1/2 cup erythritol</li>
+    <li>3-4 pinches of salt</li>
+    <li>1 1/2 Tbsp tahini &#40;or heavy cream if not dairy-free&#41;</li>
+    <li>dash vegetable glycerin &#40;optional - adds sweetness and helps ice-cream not stick to ice-cream maker&#41;</li>
+    <li>1/3 cup cocoa powder</li>
+    <li>1 tsp xanthan gum or gluccomanan</li>
+  </ul>
+
+  <h4>Directions</h4>
+  <ol>
+    <li>Blend all ingredients in a large blender. Add the xanthan gum or gluccomanan last to avoid clumping.</li>
+    <li>Pour in to ice cream maker and churn for 20-25 minutes.</li>
+  </ol>
+
+  <p class="recipeDetails">servings: 4-5</p>
+  <br><br><br><br>
+</div></div>
+
+<!--Recipe: Brownie in a Mug-->
+<div id="mugBrownie" class="page">
+<div class="mug-brownie">
+  <br><br><br><br>
+  
+  <!--Favorites Icon-->
+  <div class=favIcon>
+  <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-suit-heart" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" d="M8 6.236l.894-1.789c.222-.443.607-1.08 1.152-1.595C10.582 2.345 11.224 2 12 2c1.676 0 3 1.326 3 2.92 0 1.211-.554 2.066-1.868 3.37-.337.334-.721.695-1.146 1.093C10.878 10.423 9.5 11.717 8 13.447c-1.5-1.73-2.878-3.024-3.986-4.064-.425-.398-.81-.76-1.146-1.093C1.554 6.986 1 6.131 1 4.92 1 3.326 2.324 2 4 2c.776 0 1.418.345 1.954.852.545.515.93 1.152 1.152 1.595L8 6.236zm.392 8.292a.513.513 0 0 1-.784 0c-1.601-1.902-3.05-3.262-4.243-4.381C1.3 8.208 0 6.989 0 4.92 0 2.755 1.79 1 4 1c1.6 0 2.719 1.05 3.404 2.008.26.365.458.716.596.992a7.55 7.55 0 0 1 .596-.992C9.281 2.049 10.4 1 12 1c2.21 0 4 1.755 4 3.92 0 2.069-1.3 3.288-3.365 5.227-1.193 1.12-2.642 2.48-4.243 4.38z"/>
+  </svg>
+</div>
+
+  <h2>Brownie in a Mug</h2><br>
+
+  <p class="recipeDetails"><i>Category: Desserts</i></p>
+  <p class="recipeDetails"><em>Free of: oats, gluten, eggs, sugar, dairy</em></p>
+  <img src="brownie-mug.jpg" class="card-img-top" alt="brownie in a mug with powdered erythritol">
+
+  <table>
+    <tr>
+      <td><em>prep time: </em>8-10 mins</td>
+      <td><em>cook time: </em>1 min</td>
+    </tr>
+      <td colspan="2"><em>total time: </em>9-11 mins</td>
+  </table>
+
+  <h4>Ingredients</h4>
+  <ul>
+    <li>1 Tbsp coconut oil</li>
+    <li>generous 3 Tbsp unsweetened almond milk</li>
+    <li>1/2 tsp vanilla extract &#40;optional&#41;</li>
+    <li>1 1/2 Tbsp unsweetened cocoa powder</li>
+    <li>1 Tbsp erythritol</li>
+    <li>1 Tbsp coconut flour</li>
+    <li>1 1/2 Tbsp almond flour</li>
+    <li>1/4 tsp baking powder</li>
+    <li>2 pinches salt</li>
+  </ul>
+
+  <h4>Directions</h4>
+  <ol>
+    <li>Melt coconut oil in microwave-safe mug. A larger mug is recommended. Stir in almond milk and vanilla extract, if using.</li>
+    <li>In a small bowl, mix the dry ingredients well. Add the dry ingredients to the mug and mix thoroughly.</li>
+    <li>Microwave for 45 seconds. It should puff up a bit. This will actually look more like brownie batter than a solid brownie. You can microwave a bit longer but not more than a minute.</li>
+  </ol>
+
+  <p class="recipeDetails">servings: 1</p>
+  <br><br><br>><br>
+</div></div>
+
+<!--Recipe: Coconut Whipped Cream-->
+<div id="coconutCream" class="page">
+<div class="coconut-cream">
+  <br><br><br><br>
+  
+  <!--Favorites Icon-->
+  <div class=favIcon>
+  <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-suit-heart" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" d="M8 6.236l.894-1.789c.222-.443.607-1.08 1.152-1.595C10.582 2.345 11.224 2 12 2c1.676 0 3 1.326 3 2.92 0 1.211-.554 2.066-1.868 3.37-.337.334-.721.695-1.146 1.093C10.878 10.423 9.5 11.717 8 13.447c-1.5-1.73-2.878-3.024-3.986-4.064-.425-.398-.81-.76-1.146-1.093C1.554 6.986 1 6.131 1 4.92 1 3.326 2.324 2 4 2c.776 0 1.418.345 1.954.852.545.515.93 1.152 1.152 1.595L8 6.236zm.392 8.292a.513.513 0 0 1-.784 0c-1.601-1.902-3.05-3.262-4.243-4.381C1.3 8.208 0 6.989 0 4.92 0 2.755 1.79 1 4 1c1.6 0 2.719 1.05 3.404 2.008.26.365.458.716.596.992a7.55 7.55 0 0 1 .596-.992C9.281 2.049 10.4 1 12 1c2.21 0 4 1.755 4 3.92 0 2.069-1.3 3.288-3.365 5.227-1.193 1.12-2.642 2.48-4.243 4.38z"/>
+  </svg>
+</div>
+
+  <h2>Coconut Whipped Cream</h2><br>
+
+  <p class="recipeDetails"><i>Category: Desserts</i></p>
+  <p class="recipeDetails"><em>Free of: oats, gluten, eggs, sugar, dairy, nuts</em></p>
+  <img src="whip-cream.jpg" class="card-img-top" alt="coconut whipped cream with raspberries">
+
+  <table>
+    <tr>
+      <td><em>prep time: </em>5 mins</td>
+      <td><em>fridge time: </em>1-2 days</td>
+    </tr>
+      <td colspan="2"><em>total time: </em>5 mins & 1-2 days</td>
+  </table>
+
+  <h4>Ingredients</h4>
+  <ul>
+    <li>1 13.5oz can full-fat coconut milk &#40;must be full fat&#41;</li>
+    <li>1 Tbsp sweetener &#40;honey, maple syrup, powdered erythritol&#41;</li>
+    <li>1 tsp vanilla extract &#40;optional&#41;</li>
+  </ul>
+
+  <h4>Directions</h4>
+  <ol>
+    <li>Put the coconut milk in the fridge for 1-2 days. The cream and liquid will separate.</li>
+    <li>Chill the mixing bowl in the fridge for 15 minutes.</li>
+    <li>Open the can of coconut milk and scoop the hardened cream into your bowl. Set the liquid aside to use as coconut milk in other recipes. I like to open the can upside down, so I can pour out the liquid. DON&rsquo;T shake the can.</li>
+    <li>Add the sweetener. Using a hand mixer or stand mixer, mix the cream until stiff peaks form.</li>
+    <li>Enjoy with some fresh fruit or on top of another dessert. This whipped cream can be stored in a sealed container in the fridge for one week.</li>
+  </ol>
+
+  <p class="recipeDetails">servings: 2-4</p>
+  <br><br><br><br>
+</div></div>
+
+<!--Search page-->
+<div id="search" class="page">
+<div class="searchPG">
+  <br><br><br><br>
+<h2>Search</h2><br>
+<h5>To find recipes that avoid your allergens, search below&colon;</h5><br>
+  <form class="form-group my-2 my-lg-0">
+  <h4>Allergens to avoid:</h4>
+  <br>
+  <div class="custom-control custom-checkbox custom-control-inline">
+    <input type="checkbox" class="custom-control-input" id="oats">
+    <label class="custom-control-label" for="oats">oats</label>
+  </div>
+  <div class="custom-control custom-checkbox custom-control-inline">
+    <input type="checkbox" class="custom-control-input" id="eggs">
+    <label class="custom-control-label" for="eggs">eggs</label>
+  </div>
+  <div class="custom-control custom-checkbox custom-control-inline">
+    <input type="checkbox" class="custom-control-input" id="sugar">
+    <label class="custom-control-label" for="sugar">sugar</label>
+  </div>  
+  <div class="custom-control custom-checkbox custom-control-inline">
+    <input type="checkbox" class="custom-control-input" id="gluten">
+    <label class="custom-control-label" for="gluten">gluten</label>
+  </div>  
+  <div class="custom-control custom-checkbox custom-control-inline">
+    <input type="checkbox" class="custom-control-input" id="dairy">
+    <label class="custom-control-label" for="dairy">dairy</label>
+  </div>
+  <div class="custom-control custom-checkbox custom-control-inline">
+    <input type="checkbox" class="custom-control-input" id="nuts">
+    <label class="custom-control-label" for="nuts">nuts</label>
+  </div>
+  <br><br>
+    <button class="btn btn-outline-success my-2 my-sm-0" id="search" type="submit" onsearch="searchTool()">Search</button>
+  </form>
+
+  <br><br><br><br>
+</div></div></div>
+
+<div id="placeholder">
+
+</div>
+
+    <!--service worker-->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () =>{
+          navigator.serviceWorker.register('serviceworker.js')
+            .then(function(registration) {
+              console.log('Registration successful, scope is:', registration.scope);
+          })
+          .catch(function(error) {
+            console.log('Service worker registration failed, error: ', error);
+          });
+        });
+      }
+      </script>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="rating/build/bootstrap4-rating-input.min.js" type="text/JavaScript"></script>
+    <script src="https://use.fontawesome.com/5ac93d4ca8.js"></script>
+    
+    <!--JS for recipe cards, search tool, and favorites (future)-->
+    <script src="main.js"></script>
+
+    <!--Single-page app navigation-->
+    <script>
+      function showPage(pageId){
+        $(".page").hide();
+        $(pageId).show();
+      }
+
+      location.hash = "";
+      location.hash = "#homeScreen";
+  
+      $(window).on("hashchange", function(){
+        console.log("Hash Changed! " + location.hash);
+        showPage(location.hash);
+      })
+    </script>
+  
+  </body>
+</html>

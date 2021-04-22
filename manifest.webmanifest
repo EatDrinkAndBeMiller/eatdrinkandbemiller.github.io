@@ -1,0 +1,22 @@
+{
+"short_name": "AbF",
+"name": "Allergic but Free",
+"description": "App with a collection of recipes for those with food allergies and senstivities",
+"dir": "ltr",
+"lang": "en-US",
+"icons": [{
+    "src": "logo_192.png",
+    "type": "image/png",
+    "sizes": "192x192"
+    },
+    {
+    "src":"logo_512.png",
+    "type": "image/png",
+    "sizes": "512x512"
+}],
+"start_url":"allergic_but_free.html",
+"background_color": "#e0ffff",
+"display": "standalone",
+"theme_color": "#e0ffff",
+"orientation": "portrait"
+}
