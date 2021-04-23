@@ -1,0 +1,31 @@
+@import 'variables';
+
+body {
+    background-color: black;
+    color: $white;
+}
+
+.bg-dark {
+    background-color: black;
+}
+
+.nav-link {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#phone {
+    text-decoration: none;
+}
+
+.navbar-text {
+    color: $yellow;
+}
+
+.btn {
+    color: $white;
+}
+
+.fa-facebook-square {
+    
+}

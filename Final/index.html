@@ -1,23 +1,149 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="images/icon.png" type="image/png">
 
-    <title>Apex Automotive</title>
-  </head>
-  <body>
-    <div class="container">
+  <script src="https://kit.fontawesome.com/bd2d7a1f89.js" crossorigin="anonymous"></script>
 
+  <title>Apex Automotive</title>
+</head>
+
+<body>
+  <div class="container">
+    <!--nav bar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="Apex Auto logo" width="200px"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+          <span class="navbar-text">
+            Call us&colon; <a href="tel:3034328299" id="phone">303-432-8299</a>
+          </span>
+        </div>
+      </div>
+    </nav>
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="images/apex_banner.jpg" class="d-block w-100" alt="photo of Apex garage with address and phone">
+        </div>
+        <div class="carousel-item">
+          <img src="images/cars_banner.jpg" class="d-block w-100" alt="photo of vehicles in Apex's garage">
+        </div>
+        <div class="carousel-item">
+          <img src="images/apex_logo2.jpg" class="d-block w-100" alt="Apex Auto contact info">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
+      <hr>
+    <div class="row">
+      <div class="col-md-8">
+        <h4>About Apex</h4> 
+          <p>Apex Automotive is an independent and locally-owned automotive service and repair shop built on a word-of-mouth 
+            reputation. Our ASE-Certified technicians average over 20 years experience. We believe that routine maintenance 
+            is the best way to protect your car against issues. </p>
+          
+          <p>We utilize Original Equipment Manufacturer (OEM) parts and dealership level diagnostic equipment 
+            unless instructed otherwise by our customer. Apex Automotive can address all of your mechanical needs 
+            from preventative maintenance to major engine repairs. </p>
+            
+          <p>Our  technicians will inspect your car, diagnose the problem and suggest a repair or replacement. We 
+            also include a limited warranty with all the work we do and parts we use.</p>
+      </div>
+      <div class="col-md-4">
+        <h4>Warranty</h4>
+          <p>We stand behind the work we do with a 12 month or 12,000 mile warranty for parts and labor. Some parts carry 
+            a longer warranty offered by the manufacturer.</p>
 
+        <button class="btn btn-primary"><a href="https://www.facebook.com/Apex-Automotive-138529229639355/" target="_blank">
+          Facebook</a></button><br>
+        <button class="btn btn-primary"><a href="services.html">Services</a></button>
+      </div>
+    </div>
+      <hr>
+    <div class="row">
+      <div class="col-md-4">
+        <p>
+          Monday-Friday&colon; 8 AM - 5&colon;30 PM <br>
+          Night Drop Available
+        </p>
+        ​<a href="tel:3034328299" id="phone">303-432-8299</a>
+        <br><br>
+        <p>9491 West 44th Ave, Ste. 115 <br>
+        Wheat Ridge, CO 80033
+        </p>
+      </div>
+      <div class="col-md-8">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3066.2559090015893!2d-105.10522188525981!3d39.77881200211291!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf51579e1625797f4!2sApex%20Automotive!5e0!3m2!1sen!2sus!4v1619141480061!5m2!1sen!2sus" 
+          width="600" height="450" style="border:0;" allowfullscreen="true" loading="lazy"></iframe>
+      </div>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <footer class="row">
+      <div class="col-md-4">
+        &copy;2021 Apex Automotive <br><br>
+        ​<a href="tel:3034328299" id="phone">303-432-8299</a><br>
+        <a href="mailto:robhillrepair@gmail.com">robhillrepair@gmail.com</a>
+      </div>
+      <div class="col-md-4">
+        <a href="index.html">Home</a><br>
+        <a href="about.html">About</a><br>
+        <a href="services.html">Services</a><br>
+        <a href="contact.html">Contact Us</a>
+      </div>
+      <div class="col-md-4">
+        <a href="https://www.facebook.com/Apex-Automotive-138529229639355/" target="_blank">
+          <span style="font-size:30px">
+          <i class="fab fa-facebook-square"></i>
+        </span></a>
+        <br><br>
+        <p>Created by&colon; <a href="https://ehmiller27.wixsite.com/elizabethmiller" target="_blank">
+          Elizabeth Miller</a></p>
+      </div>
+    </footer>
 
+  </div>
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
-  </body>
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+</body>
 </html>
