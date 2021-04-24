@@ -22,8 +22,25 @@ body {
     color: $yellow;
 }
 
-.btn {
-    color: $white;
+.btn a {
+    color: white;
+    text-decoration: none;
+}
+
+.bg-about{background-image:url("../images/cars_banner2.jpg");
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-color:#2C7CAD;
+    min-height:350px;
+    width:100%;
+}
+
+.bg-services{background-image:url("../images/banner_mechanics2.jpg");
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-color:#2C7CAD;
+    min-height:350px;
+    width:100%;
 }
 
 @media (min-width: 600px) {
