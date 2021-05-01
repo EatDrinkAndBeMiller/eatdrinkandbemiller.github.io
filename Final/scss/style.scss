@@ -48,3 +48,10 @@ body {
         height: 300px;
     }
 }
+
+//hide logos on phone 
+@media (max-width: 600px) {
+    .hide-logos {
+        display: none;
+    }
+}
