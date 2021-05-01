@@ -47,6 +47,11 @@ footer {
     padding-top: 20px;
 }
 
+//brings top item below fixed top
+.top-item {
+    margin-top: 80px;
+}
+
 @media (min-width: 600px) {
     iframe {
         height: 300px;
