@@ -9,6 +9,10 @@ body {
     background-color: black;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    color: $blue;
+}
+
 .nav-link {
     padding-left: 20px;
     padding-right: 20px;
@@ -30,7 +34,7 @@ body {
 .bg-about{background-image:url("../images/cars_banner2.jpg");
     background-repeat:no-repeat;
     background-size:cover;
-    background-color:#2C7CAD;
+    background-color:$blue;
     min-height:350px;
     width:100%;
 }
@@ -38,7 +42,7 @@ body {
 .bg-services{background-image:url("../images/banner_mechanics2.jpg");
     background-repeat:no-repeat;
     background-size:cover;
-    background-color:#2C7CAD;
+    background-color:$blue;
     min-height:350px;
     width:100%;
 }
@@ -46,7 +50,7 @@ body {
 .bg-contact{background-image:url("../images/contact_banner.jpg");
     background-repeat:no-repeat;
     background-size:cover;
-    background-color:#2C7CAD;
+    background-color:$blue;
     min-height:350px;
     width:100%;
 }
